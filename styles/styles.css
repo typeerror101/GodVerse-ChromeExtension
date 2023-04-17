@@ -1,20 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
-    background-color: aqua;
-    align-items: center;
+    background-color: #0B2447;
+    /* align-items: center; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    color: #A5D7E8;
+
+    min-width: 200px; /* your desired width */
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
 }
 
-.main-text {
-    font-size: larger;
-    font-weight: bold;
-    padding: 2rem auto;
+.mainText h1{
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    margin: 17px auto;
+}
+.mainText h3{
+    color: #A5D7E8;
+    font-weight: 400;
+    font-size: small;
+    
 }
 
 .verse-body{
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgb(35, 33, 55);
+    
 }
 
-button{
-    margin: auto;
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.btn-15{
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 2rem;
+    background-color: #A5D7E8;
+    color: #0B2447;
+    z-index: 1;
+}
+
+
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #576CBC;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+}
+.btn-15:hover {
+  color: #fff;
+  border-radius: 2rem;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+  border-radius: 2rem;
+}
+.btn-15:active {
+  top: 2px;
+  border-radius: 2rem;
 }
