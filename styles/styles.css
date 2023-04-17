@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.main-text {
+    font-size: larger;
+    font-weight: bold;
+    padding: 2rem auto;
+}
+
+.verse-body{
+    margin-bottom: 1rem;
+}
+
+button{
+    margin: auto;
+}
