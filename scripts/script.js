@@ -8,17 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
 const mybutton = document.getElementById('submit');
 
 mybutton.addEventListener("click", () => {
+    verseBodyElement.innerHTML ='';
     getVerse();
     console.log("Button Clicked");
 });
     
+const loadingElement = document.querySelector('#loading');
+const verseBodyElement = document.querySelector('#verse-text');
+
 var getVerse = function(){
-    
+    loadingElement.style.display="block";
+
     fetch(url)
     .then(data => data.json())
     .then(apiData => {
+        loadingElement.style.display="none";
+        verseBodyElement.innerHTML ='';
+
         const Verse = apiData[0].text;
-        document.getElementById('verse-text').innerHTML = '<strong>'+
+        verseBodyElement.innerHTML = '<strong>'+
         apiData[0].bookname+
         ' ' + apiData[0].chapter +
         ':' + apiData[0].verse +
