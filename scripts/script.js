@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const mybutton = document.getElementById('submit');
 
 mybutton.addEventListener("click", () => {
-    verseBodyElement.innerHTML ='';
+    verseBodyElement.innerHTML =''; 
     getVerse();
     console.log("Button Clicked");
 });
